@@ -1,0 +1,23 @@
+class Solution {
+    
+    Set<Integer> h = new HashSet<>();    
+    
+    public boolean isHappy(int n) {
+        int sum = 0;
+        
+        while(n != 0){
+            int r = n%10;
+            sum += r*r;
+            n /= 10;
+        }
+        
+        if (sum == 1) return true;
+        
+        if (!h.contains(sum)){
+            h.add(sum);
+            return isHappy(sum);
+        }
+        
+        return false;
+    }
+}
