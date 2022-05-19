@@ -1,2 +1,1 @@
-# Happy-Number
-Hash Math
+https://leetcode.com/problems/happy-number/
